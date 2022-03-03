@@ -1,1 +1,31 @@
+//Given an array of non-negative integers,design a linear algorithm and implement it using a program to find whether a given key element is present or  not.Also find out the total number of comparisons.
 
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int arr[MAX],flag=0,key,n;
+    printf("Enter the number of elements you want to enter:");
+    scanf("%d",&n);
+    printf("Enter the elements:\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("enter the key:");
+    scanf("%d",&key);
+    for(int i=0;i<n;i++)
+    {
+        flag++;
+        if(arr[i]==key)
+        {
+            printf("The Key is Present at index %d and the  key element is %d\n",i,arr[i]);
+            printf("Total number of comparisons are %d",flag);
+        }
+        if(i==n-1)
+        {
+            printf("Key not found and total comparisons were %d",flag);
+        }
+    }
+    return 0;
+}
