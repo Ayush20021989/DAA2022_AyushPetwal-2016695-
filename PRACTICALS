@@ -21,6 +21,7 @@ int main()
         {
             printf("The Key is Present at index %d and the  key element is %d\n",i,arr[i]);
             printf("Total number of comparisons are %d",flag);
+            break;
         }
         if(i==n-1)
         {
